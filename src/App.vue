@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div>
+      <base-navbar></base-navbar>
+  </div>
+
+  <PreviousPageButton></PreviousPageButton>
+
+  <div class="main">
+    <router-view></router-view>
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseNavbar from "./components/BaseNavbar.vue"
+import PreviousPageButton from "./components/PreviousPageButton.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    BaseNavbar,
+    PreviousPageButton
+  },
+    
 }
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

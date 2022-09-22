@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,300;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    transition: all 300ms ease-in-out;
+}
+
+
+.main {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+    /* background-color: rgb(205, 232, 244); */
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 7px 35px -24px rgba(0,0,0,0.75);
+}
+
+.nav-link {
+    margin: 0 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover {
+    color: rgb(177, 84, 84);
+}
+
+.active {
+    animation: neonAnim 5s alternate-reverse infinite;
+}
+
+.back-button {
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    margin: 2rem;
+    background-color: rgb(182, 182, 182);
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    font-weight: 500;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.back-button:hover {
+    color: white;
+    background-color: rgb(69, 69, 69);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem
+}
+
+table {
+    border-collapse:separate; 
+}
+
+
+table tr:nth-child(even) {
+    background-color: rgb(224, 224, 224);
+}
+table tr:nth-child(odd) {
+    background-color: rgb(237, 237, 237);
+}
+
+.table-row td {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+
+}
+
+
+/* table {
+    background-color: rgb(223, 223, 223);
+} */
+
+
+.delete-btn {
+    border: 0;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    margin: 0 5rem 0 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-btn {
+    align-self: flex-end;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
+
+.bookmark-form {
+    padding: 1rem;
+    border: 1px solid black;
+    display: grid;
+    gap: 1rem;
+    min-width: 40rem;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element input {
+    outline: none;
+    height: 2rem;
+    font-size: 1rem;
+    padding-left: 4px;
+}
+
+.form-element label {
+    font-size: 1.4rem;
+}
+
+
+textarea {
+    transition: none;
+    max-width: 50rem;
+    max-height: 20rem;
+    outline: none;
+    font-size: 1rem;
+    padding: 4px;
+}
+
+.buttons {
+    display: inline-block;
+    width: auto;
+    justify-self: flex-end;
+}
+
+.buttons button {
+    margin: .5rem;
+    padding: .4rem 1.3rem;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(213, 212, 212);
+
+}
+
+.cancel-btn {
+    text-decoration: none;
+    color: black;
+}
+
+.cancel-btn:hover {
+    color: white;
+}
+
+.buttons button:hover {
+    background-color: rgb(180, 178, 178);
+    color: white;
+}
+
+
+
+
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 11px rgba(0, 0, 0, .7),
+          0 0 41px rgba(0, 0, 0, .7),
+          0 0 101px rgba(0, 0, 0, .7);
+      }
+      to {
+        text-shadow:
+          0 0 6px rgba(0, 0, 0, .7),
+          0 0 21px rgba(0, 0, 0, .7),
+          0 0 61px rgba(0, 0, 0, .7);
+      }
+}
