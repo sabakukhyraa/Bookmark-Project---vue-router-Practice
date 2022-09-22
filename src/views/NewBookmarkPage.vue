@@ -46,7 +46,7 @@ export default {
             this.bookmarkData.id = new Date().getTime()
             console.log(this.bookmarkData)
 
-            this.$axios.post("http://localhost:3000/bookmarks", this.bookmarkData)
+            this.$appAxios.post("/bookmarks", this.bookmarkData)
             .then(save_response => {
                 console.log("save_response", save_response)
             })
@@ -56,6 +56,8 @@ export default {
                 url: null,
                 description: null
             }
+
+            this.$router.push("/")
         }
     }
 }
