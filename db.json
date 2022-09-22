@@ -1,16 +1,3 @@
 {
-  "bookmarks": [
-    {
-      "id": 1663835475626,
-      "title": "Vue3 Derslerim - Youtube",
-      "url": "https://www.youtube.com/watch?v=lAWKDhZXbKI",
-      "description": "En son vue-router ile fake DB'de axios ile data depolamayı öğrendim"
-    },
-    {
-      "id": 1663839463098,
-      "title": "LinkedIn Profilim",
-      "url": "https://www.linkedin.com/in/ali-kerem-ata-11149521a/",
-      "description": "Dijital ve sosyal bir CV olarak görüyorum, güncellemeyi unutma! "
-    }
-  ]
+  "bookmarks": []
 }

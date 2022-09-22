@@ -5,10 +5,10 @@
         <h1>Bookmark List</h1>
 
 
-        <router-link class="new-btn" to="/new">+ New Bookmark</router-link>
+        <router-link class="new-btn" :class="{'center-button':isBookmarkListEmpty}" to="/new">+ New Bookmark</router-link>
 
 
-        <table>
+        <table v-if="bookmarkList.length > 0">
             <thead>
                 <th>#</th>
                 <th>Title</th>
@@ -42,7 +42,7 @@ export default {
         return {
             bookmarkList: [
                 
-            ]
+            ],
         }
     },
 
@@ -60,7 +60,16 @@ export default {
             this.$appAxios.delete(`/bookmarks/${bookmark.id}`)
             .then(delete_response => {
                 console.log(delete_response)
+                if (delete_response.statusText === "OK") {
+                    this.bookmarkList = this.bookmarkList.filter( b => b.id !== bookmark.id )
+                }
             })
+        }
+    },
+
+    computed: {
+        isBookmarkListEmpty() {
+            return this.bookmarkList.length == 0
         }
     }
 

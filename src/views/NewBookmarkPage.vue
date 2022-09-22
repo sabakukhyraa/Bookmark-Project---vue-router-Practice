@@ -30,6 +30,7 @@
 
 
 <script>
+
 export default {
     data() {
         return {
@@ -43,8 +44,11 @@ export default {
     },
     methods: {
         addBookmark() {
-            this.bookmarkData.id = new Date().getTime()
-            console.log(this.bookmarkData)
+
+            this.bookmarkData.id = this.$store.getters.getBookmarkCount
+            
+            this.$store.dispatch('getBookmarks')
+            
 
             this.$appAxios.post("/bookmarks", this.bookmarkData)
             .then(save_response => {
@@ -59,6 +63,6 @@ export default {
 
             this.$router.push("/")
         }
-    }
+    },
 }
 </script>

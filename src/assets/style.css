@@ -101,6 +101,10 @@ table tr:nth-child(odd) {
     border-radius: 6px;
 }
 
+.center-button {
+    align-self: center;
+}
+
 .bookmark-form {
     padding: 1rem;
     border: 1px solid black;
