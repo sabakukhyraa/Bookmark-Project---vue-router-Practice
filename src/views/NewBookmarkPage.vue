@@ -45,10 +45,10 @@ export default {
     methods: {
         addBookmark() {
 
-            this.bookmarkData.id = this.$store.getters.getBookmarkCount
             
             this.$store.dispatch('getBookmarks')
             
+            this.bookmarkData.id = this.$store.getters.getBookmarkCount
 
             this.$appAxios.post("/bookmarks", this.bookmarkData)
             .then(save_response => {
@@ -60,8 +60,6 @@ export default {
                 url: null,
                 description: null
             }
-
-            this.$router.push("/")
         }
     },
 }

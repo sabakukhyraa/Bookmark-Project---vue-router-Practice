@@ -10,7 +10,8 @@ const store = createStore({
 
     mutations: {
         bookmarkCounter (state, payload) {
-            state.bookmarkCount = payload.data.length
+            const date = new Date()
+            state.bookmarkCount = `${payload.data.length+1}${date.getMonth()}${date.getDate()}${date.getHours()}${date.getSeconds()}`
         }
     },
 

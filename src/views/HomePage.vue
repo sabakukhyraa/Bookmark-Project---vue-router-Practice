@@ -50,6 +50,7 @@ export default {
         console.log(this.$route)
         this.$appAxios.get("/bookmarks").then(
             bookmarkList_response => {
+                console.log(bookmarkList_response.data)
                 this.bookmarkList = bookmarkList_response.data || [];
             }
         )
